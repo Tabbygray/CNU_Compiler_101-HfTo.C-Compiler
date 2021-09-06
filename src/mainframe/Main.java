@@ -18,6 +18,7 @@ public class Main {
 
         try {
             File file = new File("Sample.hf"); // import text file from local drive.
+            System.out.println("[-] Searching Sample File >> " + file.getAbsolutePath());
             Scanner fileScanner = new Scanner(file); // declare Scanner class.
 
             while (fileScanner.hasNextLine()) { // read file line by line.

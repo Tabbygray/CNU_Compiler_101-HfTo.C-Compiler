@@ -1,5 +1,22 @@
 이 프로그램은 충남대학교 2021 2학기 컴파일러개론 1주차 과제를 위해 작성되었습니다.
 작성자: 201702000 김준홍
+작성일 : 2021-09-07 
+
+작성한(지원하는) OS : Microsoft Windows 10 
+작성에 사용된 언어 : Java JVM 11
+
+>> 프로그램 사용 방법 <<
+ 프로그램이 위치한 곳과 같은 디렉터리에 .hf 파일을 배치합니다.
+※이 때, 파일의 이름은 반드시 "Sample.hf" 이어야 합니다!
+cmd나 powershell을 이용하여 프로그램이 위치한 디렉터리로 이동한 후, 다음과 같은 명령어를 입력합니다.
+[ java -jar HfTo.C-Compiler.jar ]
+프로그램을 실행하면, 같은 디렉터리에 변환이 완료된 "output.c" 파일이 생성됩니다.
+
+>> 컴파일 및 실행방법 <<
+cmd나 powershell 등을 이용하여 src 디렉터리에 진입합니다.
+src에서 [ javac mainframe/FileSpooler.java mainframe/Main.java ] 명령어를 입력하여 컴파일합니다.
+실행은 [ java mainframe/Main.java ] 명령어를 입력합니다.
+
 
 이 프로그램은 .hf파일의 문법을 .c의 문법으로 변환하여 출력합니다.
 
@@ -35,4 +52,3 @@ system(“rm ./test.txt”);
 // 이런 식으로 계속 바꾼다.
 // system 대신 적당한 시스템 함수를 써도 무방함
 // 권한에 주의한다.
-

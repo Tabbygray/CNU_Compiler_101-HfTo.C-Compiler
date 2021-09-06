@@ -29,6 +29,7 @@ public class FileSpooler {
             writer.close();
             this.arrayIndex = 0;
             System.out.println(">> File Successfully created. <<");
+            System.out.println("[!] Output File Directory >> " + file.getAbsolutePath());
             System.out.println(" _________________");
             System.out.println("|# :           : #|");
             System.out.println("|  :           :  |");

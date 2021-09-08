@@ -11,6 +11,6 @@ system("del \"test operation.txt\"");
 system("dir > Directory_List.txt");
 system("dir > \"Directory List.txt\"");
 printf("********test.txt********");
-system("notepad Directory_List.txt");
-system("notepad \"Directory List.txt\"");
+system("type Directory_List.txt");
+system("type \"Directory List.txt\"");
 }

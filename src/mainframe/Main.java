@@ -97,7 +97,7 @@ public class Main {
                                 // AND token's last char also is "
                                 { //this sequence is called when [show "nospacewords"] like called.
                                     int tokenLength = tokenToCheck_show.length();
-                                    fileSpooler.saveDataToArray("system(\"notepad " + tokenToCheck_show.substring(1, tokenLength - 2) + "\");");
+                                    fileSpooler.saveDataToArray("system(\"type " + tokenToCheck_show.substring(1, tokenLength - 2) + "\");");
                                 } else if (tokenToCheck_show.charAt(0) == '\"') { // Token has spaces inside. ex) echo "help me"
                                     String strBuffer = "";
                                     strBuffer = strBuffer.concat(tokenToCheck_show.substring(1) + " "); // first token with "
@@ -110,7 +110,7 @@ public class Main {
                                             strBuffer = strBuffer.concat(nextToken + " ");
                                         }
                                     }
-                                    fileSpooler.saveDataToArray("system(\"notepad \\\"" + strBuffer + "\\\"\");");
+                                    fileSpooler.saveDataToArray("system(\"type \\\"" + strBuffer + "\\\"\");");
                                 } else { // token does not start with "
                                     System.out.println("SHOW command Syntax error. \" is expected.");
                                 }

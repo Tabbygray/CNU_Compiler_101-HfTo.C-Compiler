@@ -39,7 +39,7 @@ public class Main {
                                 // AND token's last char also is "
                                 { //this sequence is called when [echo "nospacewords"] like called.
                                     int tokenLength = tokenToCheck.length();
-                                    fileSpooler.saveDataToArray("printf(\"" + tokenToCheck.substring(1, tokenLength - 2) + "\");");
+                                    fileSpooler.saveDataToArray("printf(\"" + tokenToCheck.substring(1, tokenLength - 2) + "\\n\");");
                                 } else if (tokenToCheck.charAt(0) == '\"') { // Token has spaces inside. ex) echo "help me"
                                     String strBuffer = "";
                                     strBuffer = strBuffer.concat(tokenToCheck.substring(1) + " ");  // first token with "
@@ -52,7 +52,7 @@ public class Main {
                                             strBuffer = strBuffer.concat(nextToken + " ");
                                         }
                                     }
-                                    fileSpooler.saveDataToArray("printf(\"" + strBuffer + "\");");
+                                    fileSpooler.saveDataToArray("printf(\"" + strBuffer + "\\n\");");
                                 } else { // token does not start with "
                                     System.out.println("ECHO command Syntax error. \" is expected.");
                                 }
